@@ -15,7 +15,7 @@
         </div>
 	</div>
     <div>
-        <img src="img\logo.gif" class="img-fluid" alt="main_image">
+        <img src="img\logo.gif" class="img-fluid" alt="main_image" width="300em">
     </div>
     <div class="container">
 		<div class="navbar-header">
