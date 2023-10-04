@@ -4,7 +4,7 @@
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 
 <%-- CLASS는 스타일 적용시에 사용 되는 이름, 중첩 가능 --%>
-<%! String greeting = "현재 페이지는 가성비 기타 상품 목록입니다.";%>
+<%! String greeting = "현재 페이지는 기타 상품 목록입니다.";%>
 
     <div class="jumbotron">
         <div class="container">
@@ -41,6 +41,9 @@
                     <p>
                         <%=product.getUnitPrice()%>원
                     </p>
+                    <p>
+                        <a href = "product_detail.jsp?id=<%= product.getProductId()%>" class="btn btn-secondary" role="button">상품상세정보 &raquo;</a>
+                    </p>
                 </div>
                 <%
                     }
@@ -55,7 +58,6 @@
             <p class="card-text">출처 : 쿠팡</p>
         </div>
     </div>
-
     <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">베이스 기타</a>
         <a href="#" class="list-group-item list-group-item-action">일렉 기타</a>
