@@ -1,4 +1,4 @@
-# 자바 웹 프로그래밍(2) 1-3 20221017 임사랑
+# 자바 웹 프로그래밍(2) 수1-3 20221017 임사랑
 
 ### 2023년 09월 06일 자바웹프로그래밍 2주차
 * 프로젝트 환경 설정 및 HELLO World 확인 완료
@@ -22,3 +22,14 @@
 * 연습문제 완료
 * 예외처리 페이지 제작
 * "web.xml" 파일 "<error-page>"
+
+### 2023년 10월 11일 
+* Request
+    * .getRemoteAddr() : 클라이언트의 IP 주소
+    * .getRequestURL() : 웹 브라우저가 요청한 url 경로
+    * .getParameter(String name) : 이름이 name인 파라미터를 반환
+    * .getParameterValues(String name) : 이름이 name인 모든 파라미터 값
+    * .getParameterNames() : 웹 브라우저가 전송한 파라미터의 이름을 반환
+* 자바에서 사용하는 외부 라이브러리 파일은 jar을 사용.
+    
+    

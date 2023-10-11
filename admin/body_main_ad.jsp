@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-<%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product"%>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+<%@ page import="dao.ProductRepository"%>
+<%@ page import="java.util.ArrayList"%>
 
 <%-- CLASS는 스타일 적용시에 사용 되는 이름, 중첩 가능 --%>
 <%! String greeting = "현재 페이지는 기타 상품 목록입니다.";%>
@@ -13,7 +13,10 @@
             </h3>
         </div>
     </div>
-    <%ArrayList<Product>listOfProducts = productDAO.getAllProducts();%>
+    <%
+		ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfProducts = dao.getAllProducts();
+	%>
     <div class="container">
             <div class="row" align="center">
                 <%
@@ -22,7 +25,7 @@
                 %>
                 <div class="col-md-4">
                     <div class="card bg-white text-dark">
-                        <img src="img/product/<%=product.getFilename()%>" class="card-img" alt="...">
+                        <img src="../img/product/<%=product.getFilename()%>" class="card-img" alt="...">
                         <div class="card-img-overlay">
                             <h5 class="card-title">
                                 기타 이미지 샘플
@@ -42,7 +45,7 @@
                         <%=product.getUnitPrice()%>원
                     </p>
                     <p>
-                        <a href = "product_detail.jsp?id=<%= product.getProductId()%>" class="btn btn-secondary" role="button">상품상세정보 &raquo;</a>
+                        <a href = "product_detail_ad.jsp?id=<%= product.getProductId()%>" class="btn btn-secondary" role="button">상품상세정보 &raquo;</a>
                     </p>
                 </div>
                 <%
@@ -52,7 +55,7 @@
         <hr>
     </div>
     <div class="card bg-dark text-white">
-        <img src="img/event.jpg" class="card-img" alt="...">
+        <img src="../img/event.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
             <h5 class="card-title">가성비 악기/악기용품 이벤트</h5>
             <p class="card-text">출처 : 쿠팡</p>

@@ -4,7 +4,12 @@ import dto.Product;
 
 public class ProductRepository {
     private ArrayList<Product> listOfProducts = new ArrayList<Product>(); //ArrayList를 Product로 캐스팅
-    
+    private static ProductRepository instance = new ProductRepository();
+
+   public static ProductRepository getInstance(){
+	return instance;
+   }
+
     public ProductRepository() {
         Product Jizhilin = new Product("P1", "SD-108", 42900);
         Jizhilin.setDescription("느릅나무, 색상 6종");
@@ -12,6 +17,7 @@ public class ProductRepository {
         Jizhilin.setManufacturer("JIZHILIN");
         Jizhilin.setUnitsInStock(1000);
         Jizhilin.setCondition("New");
+        Jizhilin.setFilename("P1.jpg");
         
         Product blueAngel = new Product("P2", "GRIT", 69800);
         blueAngel.setDescription("base wood, 색상 5종");
@@ -19,6 +25,7 @@ public class ProductRepository {
         blueAngel.setManufacturer("블루엔젤");
         blueAngel.setUnitsInStock(1000);
         blueAngel.setCondition("New");
+        blueAngel.setFilename("P2.jpg");
         
         Product cantavil = new Product("P3", "ALLIE-100", 99000);
         cantavil.setDescription("spruce wood, 색상 1종");
@@ -26,6 +33,7 @@ public class ProductRepository {
         cantavil.setManufacturer("칸타빌");
         cantavil.setUnitsInStock(1000);
         cantavil.setCondition("New");
+        cantavil.setFilename("P3.jpg");
         
         Product khoneim = new Product("P4", "3W017", 184000);
         khoneim.setDescription("paulownia, 색상 2종");
@@ -33,6 +41,7 @@ public class ProductRepository {
         khoneim.setManufacturer("코네임");
         khoneim.setUnitsInStock(1000);
         khoneim.setCondition("New");
+        khoneim.setFilename("P4.jpg");
         
         Product hex = new Product("P5", "W300 S/MGY", 385000);
         hex.setDescription("indonesian mahogany, 색상 1종");
@@ -40,6 +49,7 @@ public class ProductRepository {
         hex.setManufacturer("헥스");
         hex.setUnitsInStock(1000);
         hex.setCondition("New");
+        hex.setFilename("P5.jpg");
         
         Product lunas = new Product("P6", "GX-101", 255000);
         lunas.setDescription("basewood, 색상 5종");
@@ -47,6 +57,7 @@ public class ProductRepository {
         lunas.setManufacturer("루나스");
         lunas.setUnitsInStock(1000);
         lunas.setCondition("New");
+        lunas.setFilename("P6.jpg");
         
         listOfProducts.add(Jizhilin);
         listOfProducts.add(blueAngel);
@@ -71,5 +82,9 @@ public class ProductRepository {
             }
         }
         return productById;
+    }
+    
+    public void addProduct(Product product){
+        listOfProducts.add(product);
     }
 }
