@@ -20,7 +20,7 @@
         <%@ include file="../top_menu.jsp" %>
         <div class="jumbotron">
             <div class="card bg-dark text-white">
-                <img src="img/event.jpg" class="card-img" alt="...">
+                <img src="../img/event.jpg" class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">서버 점검 공지</h5>
                     <p class="card-text">오늘부터 3일동안 홈페이지 운영을 중단합니다.</p>
