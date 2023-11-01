@@ -71,7 +71,7 @@ public class ProductRepository {
         return listOfProducts;
     }
     
-    public Product getProductByID(String productId){
+    public Product getProductById(String productId){
         Product productById = null;
         
         for(int i = 0; i<listOfProducts.size();i++){

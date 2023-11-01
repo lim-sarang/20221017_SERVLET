@@ -28,7 +28,7 @@
         <% 
             String id = request.getParameter("id");
             ProductRepository dao = ProductRepository.getInstance();
-            Product product = dao.getProductByID(id);
+            Product product = dao.getProductById(id);
         %>
         <div class="container">
             <div class="row">
