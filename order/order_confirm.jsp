@@ -3,6 +3,7 @@
 <%@ page import="java.net.URLDecoder"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository"%>
+<%@ page import="java.util.Date"%>
 
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -107,6 +108,8 @@
                 <a href="order_cancelled.jsp" class="btn btn-secondary" role="button"> 취소 </a>			
            </div>
 	    </div>	
+        <br><hr>
+        <jsp:include page="../footer.jsp" />
     </body>
 </html>
 
