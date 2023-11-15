@@ -15,6 +15,13 @@
 	String shipping_country = "";
 	String shipping_zipCode = "";
 	String shipping_addressName = "";
+
+     // 임시로 국가 목록을 맵에 저장
+    Map<String, String> countries = new HashMap<>();
+    countries.put("KR", "한국");
+    countries.put("CN", "중국");
+    countries.put("JP", "일본");
+    countries.put("US", "미국");
 	
 	Cookie[] cookies = request.getCookies(); // 쿠키 배열로부터 정보 얻기
 
@@ -66,7 +73,7 @@
                     주소 : <% out.println(shipping_addressName);%>(<% out.println(shipping_country);%>) <br>
                 </div>
                 <div class="col-4" align="right">
-                    <p>	<em>배송일: <% out.println(shipping_shippingDate);%></em>
+                    <input type="date" id="deliveryDate" name="deliveryDate" min="<%= java.time.LocalDate.now().plusDays(1) %>">
                 </div>
             </div>
         <div>

@@ -23,7 +23,6 @@
             }
         </script>
 
-        
         <title>상품 상세 정보</title>
     </head>
     
