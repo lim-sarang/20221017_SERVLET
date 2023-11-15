@@ -27,27 +27,38 @@
                 <div class="form-group row">
                     <label class="col-sm-2">배송일</label>
                     <div class="col-sm-3">
-                        <input name="shippingDate" type="text" class="form-control"/>(yyyy/mm/dd)
+                        <input name="shippingDate" type="date" class="form-control" min="<%= java.time.LocalDate.now().plusDays(1) %>"/>(yyyy/mm/dd)
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2">국가명</label>
                     <div class="col-sm-3">
-                        <input name="country" type="text" class="form-control"/>
+                        <select name="country" class="form-control">
+                            <option value="한국" selected>한국</option>
+                            <option value="중국">중국</option>
+                            <option value="일본">일본</option>
+                            <option value="미국">미국</option>
+                        </select>
                     </div>
                 </div>
+
+                <!-- 우편 번호 입력 -->
                 <div class="form-group row">
                     <label class="col-sm-2">우편번호</label>
                     <div class="col-sm-3">
-                        <input name="zipCode" type="text" class="form-control"/>
+                        <input name="zipCode" type="text" class="form-control" id="zipCodeInput"/>
+                        <button onclick="openAddressPopup()">주소 검색</button>
                     </div>
                 </div>
+
+                <!-- 주소 입력 -->
                 <div class="form-group row">
                     <label class="col-sm-2">주소</label>
                     <div class="col-sm-5">
-                        <input name="addressName" type="text" class="form-control"/>
+                        <input name="addressName" type="text" class="form-control" id="addressInput"/>
                     </div>
                 </div>
+
                 <div class="form-group row">
                     <div class="col-sm-offset-2 col-sm-10 ">
                         <a href="../cart/product_cart.jsp?cartId=<%=request.getParameter(" cartid")%>" class="btn btn-secondary" role="button">
