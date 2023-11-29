@@ -47,7 +47,7 @@
                     <label class="col-sm-2">우편번호</label>
                     <div class="col-sm-3">
                         <input name="zipCode" type="text" class="form-control" id="zipCodeInput"/>
-                        <button onclick="openAddressPopup()">주소 검색</button>
+                        <input type="button" value="주소 검색" onclick="openAddressPopup()" class="btn btn-primary"/>
                     </div>
                 </div>
 
@@ -58,6 +58,18 @@
                         <input name="addressName" type="text" class="form-control" id="addressInput"/>
                     </div>
                 </div>
+
+                <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                <script>
+                    function openAddressPopup() {
+                        new daum.Postcode({
+                            oncomplete: function(data) {
+                                document.getElementById('zipCodeInput').value = data.zonecode;
+                                document.getElementById('addressInput').value = data.jibunAddress;
+                            }
+                        }).open();
+                    }
+                </script>
 
                 <div class="form-group row">
                     <div class="col-sm-offset-2 col-sm-10 ">
