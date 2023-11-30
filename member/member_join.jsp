@@ -11,7 +11,7 @@
         <title>회원가입</title>
     </head>
     <body>
-        <jsp:include page="../admin/top_menu_ad.jsp" />
+        <jsp:include page="../top_menu.jsp" />
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">회원가입</h1>
@@ -86,6 +86,37 @@
             </form>
         </div>
         <script>
+            function validateForm() {
+                var id = document.getElementsByName("id")[0].value;
+                var password = document.getElementsByName("password")[0].value;
+                var name = document.getElementsByName("name")[0].value;
+                var birth = document.getElementsByName("birth")[0].value;
+                var mail = document.getElementsByName("mail")[0].value;
+                var phone = document.getElementsByName("phone")[0].value;
+                var address = document.getElementsByName("address")[0].value;
+
+                if (id === "" || password === "" || name === "" || birth === "" || mail === "" || phone === "" || address === "") {
+                    Swal.fire({
+                        title: "입력 오류",
+                        text: "모든 값을 입력해주세요.",
+                        icon: "error",
+                        confirmButtonText: "확인"
+                    });
+
+                    return false;
+                }
+
+                return true;
+            }
+
+            document.getElementById("signin").addEventListener("click", function (event) {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+        </script>
+        
+        <script>
             function searchAddress() {
                 new daum.Postcode({
                     oncomplete: function (data) {
@@ -95,6 +126,6 @@
             }
         </script>
         <hr>
-        <jsp:include page="../admin/footer_ad.jsp" />
+        <jsp:include page="../footer.jsp" />
     </body>
 </html>

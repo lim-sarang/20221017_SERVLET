@@ -68,7 +68,6 @@
                         </div>
                     </div>
                     <p>
-                        <a href="#" class="btn btn-info">상품 주문 &raquo;</a>
                         <a href="index_ad.jsp" class="btn btn-secondary">상품 목록 &raquo;</a>
                     </p>
                 </div>
