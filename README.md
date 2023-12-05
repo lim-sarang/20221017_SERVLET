@@ -4,8 +4,8 @@
 * [웹 main 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
 ---
 ### 추가 구현
-* [popup 화면 sale 이미지로 변경]
-* [회원가입 화면 주소검색 기능 추가]
+* [popup 화면 sale 이미지로 변경](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
+* [회원가입 화면 주소검색 기능 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/singup/main_signup_add.png)
 ---
 ### 2023년 8월 30일 1주차 
 ---
@@ -17,8 +17,11 @@
 ### 2023년 9월 6일 2주차 
 ---
 ##### 1. 쇼핑몰 메인 페이지 개발
+* [쇼핑몰 메인 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/mainScene.png)
 ##### 2. index.jsp 실행 및 수정 완료
+* [index.jsp](https://github.com/lim-sarang/20221017_SERVLET/blob/main/index.jsp)
 ##### 3. 프로젝트 환경 설정 및 HELLO WORLD 확인
+* [helloword java 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/WEB-INF/src/example/HelloWorld.java)
 ---
 ###### 웹 트랜드 분석
 	- 서블릿/JSP
@@ -77,9 +80,16 @@
 
 ### 2023년 9월 13일 3주차
 ---
-##### 1. 쇼핑몰 메인 페이지 개발
+##### 1. 쇼핑몰 메인 페이지 분리
+* [쇼핑몰 메인페이지 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/index.jsp)
+* [쇼핑몰 top_menu 카테고리 추가 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_product_category_add.png)
 ##### 2. forward 액션 태그 확인
+* [forward가 사용된 popup1 코드 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/popup/popup1.jsp)
+* [포워딩되는 popup2 코드 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/popup/popup2.jsp)
 ##### 3. 연습 문제 구현
+* [shopTime 코드 분리 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/footer.jsp)
+* [shopTime 코드 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/WEB-INF/src/example/ShopTime.java)
+* [shopTime 및 buffer 출력 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_bufferAndShopTime.png)
 ---
 ###### 웹 트랜드 분석
 	1. 자바 vs C++
@@ -184,7 +194,7 @@
 ### 2023년 9월 27일 5주차
 ---
 ##### 1. 쇼핑몰 상품 목록 페이지(이미지 포함) 추가
-* [상품 목록 페이지](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_product_category_add.png)
+* [상품 목록 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_product_repository.png)
 ##### 2. useBean 액션 태그 확인
 ##### 3. 연습 문제 구현
 ---
@@ -301,6 +311,9 @@
 ### 2023년 10월 11일 7주차
 ---
 ##### 1. 쇼핑몰 상품 등록 추가
+* [관리자 index_ad 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_main.png)
+* [상품 등록 추가 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/product_add.png)
+* [상품 등록 추가 완료 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/product_add_index_ad.png)
 ---
 ###### 웹 트렌드 분석
 	- HTML 태그
