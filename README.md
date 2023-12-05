@@ -1,7 +1,7 @@
 # 자바 웹 프로그래밍(2) 수1-3 20221017 임사랑
-[웹 기능 구현 전체 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
-[웹 기능 구현 admin 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
-[웹 기능 구현 main 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
+* [웹 기능 구현 전체 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
+* [웹 기능 구현 admin 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
+* [웹 기능 구현 main 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
 ---
 ### 2023년 8월 30일 1주차 
 ---
