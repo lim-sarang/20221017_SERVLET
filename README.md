@@ -1,11 +1,11 @@
 # 자바 웹 프로그래밍(2) 수1-3 20221017 임사랑
-* [웹 기능 구현 전체 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
-* [웹 기능 구현 admin 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
-* [웹 기능 구현 main 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
+* [웹 기능 구현 전체 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
+* [웹 admin 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
+* [웹 main 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
 ---
 ### 추가 구현
-* [popup 화면 sale 이미지 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
-
+* [popup 화면 sale 이미지로 변경]
+* [회원가입 화면 주소검색 기능 추가]
 ---
 ### 2023년 8월 30일 1주차 
 ---
@@ -17,7 +17,6 @@
 ### 2023년 9월 6일 2주차 
 ---
 ##### 1. 쇼핑몰 메인 페이지 개발
-* [index.jsp](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/mainScene.png)
 ##### 2. index.jsp 실행 및 수정 완료
 ##### 3. 프로젝트 환경 설정 및 HELLO WORLD 확인
 ---
@@ -80,9 +79,7 @@
 ---
 ##### 1. 쇼핑몰 메인 페이지 개발
 ##### 2. forward 액션 태그 확인
-* [popup forward 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
 ##### 3. 연습 문제 구현
-* [shopTime 코드 분리](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_bufferAndShopTime.png)
 ---
 ###### 웹 트랜드 분석
 	1. 자바 vs C++
