@@ -3,6 +3,10 @@
 * [웹 기능 구현 admin 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
 * [웹 기능 구현 main 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
 ---
+### 추가 구현
+* [popup 화면 sale 이미지 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
+
+---
 ### 2023년 8월 30일 1주차 
 ---
 ###### 강의 소개
@@ -76,7 +80,9 @@
 ---
 ##### 1. 쇼핑몰 메인 페이지 개발
 ##### 2. forward 액션 태그 확인
+* [popup forward 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
 ##### 3. 연습 문제 구현
+* [shopTime 코드 분리](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_bufferAndShopTime.png)
 ---
 ###### 웹 트랜드 분석
 	1. 자바 vs C++
@@ -181,6 +187,7 @@
 ### 2023년 9월 27일 5주차
 ---
 ##### 1. 쇼핑몰 상품 목록 페이지(이미지 포함) 추가
+* [상품 목록 페이지](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_product_category_add.png)
 ##### 2. useBean 액션 태그 확인
 ##### 3. 연습 문제 구현
 ---
