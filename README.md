@@ -555,4 +555,87 @@
 * 우편 번호와 주소를 검색을 통해 입력되도록 수정
 	* [주문 배송지 지정 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_address_popup.png)
 
+### 2023년 11월 15일 12주차
+
+---
+##### 1. 상품 관리 페이지를 위한 DB 연동
+* [top_menu 수정](https://github.com/lim-sarang/20221017_SERVLET/blob/main/top_menu.jsp)
+* [body_main.jsp 수정](https://github.com/lim-sarang/20221017_SERVLET/blob/main/body_main.jsp)
+* [product_add_process 수정]()
+##### 2. 12주차 연습 문제 구현완료
+
+---
+###### 웹 트렌드 분석
+	- JDBC(Java Database Connectivity)
+		- 데이터베이스 활용 자바 API 
+	- MYSQL
+		- 오라클의 오픈소스 기반 데이터베이스
+	- 구름 ide 시작시, mysql 서비스 시작 필수
+		- service mysql start 
+##### DB 연동 및 상품 관리 페이지
+* [DB 연동 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/db/db_conn.jsp)
+* [DB 연동 확인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/db.png)
+##### 12주차 연습문제 구현 완료
+ * 데이터베이스 수정 작업
+ * 관리자 패스워드 변경하기
+ 	* use mysql;
+ 	* show tables;
+ 	* update mysql.user SET password = PASSWORD('123654') WHERE user = 'root'
+ 	* FLUSH PRIVILEGES;
     
+
+### 2023년 11월 22일 13주차
+
+---
+##### 1. 상품 관리 페이지 추가(수정 및 삭제)
+
+##### 2. 13주차 연습 문제 구현완료
+
+---
+
+##### 상품 관리 페이지(수정 및 삭제)
+* [상품 수정 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/admin/product_edit.jsp)
+* [전체 상품 수정 선택 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/product_edit.png)
+* [상품 수정 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/product_edit.png)
+##### 13주차 연습문제 구현 완료
+ * 상품 삭제 기능 구현
+ * [상품 삭제 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/admin/product_delete.jsp)
+ * [상품 삭제 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/delete/product_delete.png)
+ * [상품 삭제 여부 확인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/delete/product_delete_edit.png)
+ * [상품 삭제 후 db](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/delete/db_delete.png)
+ 
+ ### 2023년 11월 29일 14주차
+
+---
+##### 1. 쇼핑몰 게시판(고객센터) 페이지 추가
+
+##### 2. 14주차 연습 문제 중 일부 구현
+
+---
+###### 웹 트렌드 분석
+	- MVC 모델
+		- 소프트웨어 디자인 패턴
+		- Model : 모든 데이터
+			- 데이터 변경 시 알림
+		- View : 모델 정보 출력
+			- 변경 발생 시 모델에게 전달
+		- Controller : 모델과 뷰 연결
+			- 두 사이 간의 변화를 모니터링
+	- JSTL(JavaServer Pages Standard Tag Library)
+		- JSP 태그 확장
+		- EL(Expression Language)과 연동해 상ㅇ
+		- 코드가 훨씬 간결하고 가독성이 개선됨.
+		- 대표적으로 5가지 분류
+			- 코어가 핵심.
+			- 변수 지원, 흐름 제어 등
+		- 서버 내 라이브러리 추가 필요.
+
+##### 쇼핑몰 게시판 페이지
+- [web.xml 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/WEB-INF/web.xml)
+- [MVC 코드 폴더](https://github.com/lim-sarang/20221017_SERVLET/tree/main/WEB-INF/src/mvc)
+- [board 코드 폴더](https://github.com/lim-sarang/20221017_SERVLET/tree/main/board)
+-  [게시판(고객센터) 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/board.png)
+##### 14주차 연습문제 구현
+* 회원 가입 및 로그인 화면의 프론트만 구현됨.
+ * [사용자 로그인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_login.png)
+ * [사용자 회원가입 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/singup/main_signup.png)
