@@ -244,11 +244,51 @@
 	- 상품 3개 추가.
 	- 이미지도 출력되도록 수정함.
 
-### 2023년 10월 04일 쇼핑몰 상품 상세 페이지 추가
-* 파일에 대한 링크 추가
-* 연습문제 완료
-* 예외처리 페이지 제작
-* "web.xml" 파일 "<error-page>"
+### 2023년 10월 4일 6주차
+---
+##### 1. 쇼핑몰 상품 세부 정보 페이지 추가
+##### 2. 내장 객체
+##### 3. 에러 페이지 지정하기
+##### 4. 연습 문제 구현
+---
+###### 웹 트랜드 분석
+	- JSP 내장 객체
+		- page : 현재 페이지 내장 객체
+		- request/response : 요청/응답 객체. 가장 많이 사용됨.
+		- session : 세션 객체
+		- application : app 내장 객체
+		- 기타 : out, config, pageContext
+	- request 객체
+		- 페이지 요청시 마다 생성.
+		- 속성, 파라미터를 가질 수 있음.
+		- 내장 객체 활용 : set/getParameter 메서드
+###### 쇼핑몰 상품 세부 정보 구현
+	- productRepository.java
+		- 링크 클릭을 통해 요청된 상품 id를 리턴하는 새로운 메소드를 추가함.
+	- body_main.jsp
+		- 마우스로 링크를 클릭 시, 새로운 페이지가 뜨는 기능 구현.
+		- 부트스트랩의 html 링크 버튼 스타일 활용.
+		- <a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a>
+			- &raquo; : HTML 엔터티 코드(Entity Code)로 ">>"를 나타냄.
+	- product_detail.jsp
+		- 상품 상세 정보만 표시하도록 구성.
+		- request를 통해 jsp 내장 객체를 활용해 정보를 받음.
+		- 앞 페이지의 id를 얻고, 자바 빈즈로 전달.
+###### 내장 객체
+	- 태그 형태로 사용되지 않음.
+	- 표현식, 스크립트 릿에서 직접적으로 사용됨.(자바 코드 형태)
+	- request.getParameter("id"); 중요
+###### 에러 페이지 지정하기
+	- 예외 처리를 위한 exception 폴더 생성
+	- <%@ page errorPage = "exception/에러페이지파일명.jsp" %>
+	- 에러 페이지를 구현함.
+###### 6주차 연습 문제 구현 완료.
+	- 상품 상세 및 예외 처리 페이지
+	- index.jsp에 대한 예외처리 페이지 제작
+	- 메인 페이지 예외처리 코드
+	    <error-code>404</error-code>
+    	<location>/exception/main_server_downtime.jsp</location>
+    	</error-page>
 
 ### 2023년 10월 11일 
 * Request
