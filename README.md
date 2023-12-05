@@ -6,6 +6,7 @@
 ### 추가 구현
 * [popup 화면 sale 이미지로 변경](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
 * [회원가입 화면 주소검색 기능 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/singup/main_signup_add.png)
+* [상품 등록 시, 상품 id 길이 수정](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_name.png)
 ---
 ### 2023년 8월 30일 1주차 
 ---
