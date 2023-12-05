@@ -474,8 +474,37 @@
  	* 관리자 페이지 메뉴 클릭 시, 로그인이 수행되도록 변경
  	* role 추가 대신, 상품 등록시 사용되는 로그인 role을 관리자모드 클릭시로 변경해줌.
 
-### 2023년 11월 1일
-* 세션 및 장바구니 기능 추가
+### 2023년 10월 25일 9주차
+
+---
+##### 1. 쇼핑몰 장바구니 기능 추가
+
+##### 2. 10주차 연습 문제 구현
+
+---
+###### 웹 트렌드 분석
+	- 웹 세션
+		- 웹 사이트에 연결 상태를 지속해 저장/유지
+	- 비교적 안전한 저장소 : 세션 내장 객체
+		- javax.servlet.http.HttpSession
+			- 고유 세션 ID를 공유
+			- 세션 객체를 위한 다양한 메서드 제공
+##### 장바구니 기능 추가
+* [장바구니 코드 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/cart)
+* [장바구니 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/cart/cart.png)
+* [장바구니 상품 삭제 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/cart/cart_Delete.png)
+* [장바구니 추가 여부 확인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/cart/cart_in.png)
+* [세션 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/cart/cart_session.png)
+##### 10주차 연습문제 구현 완료
+ * footer 날짜 클래스 연동
+ * footer 내에 클래스 연동 후에도 오류가 나타남
+ 	* 모든 파일에 클래스 연동으로 해결.
+ * 로고 이미지 파일 경로 수정
+ * 세션 전체 삭제 -> 뒤로가기 후 -> 특정 상품 선택 삭제 시 오류
+ 	* 세션 값이 비어있는지 확인 후, 삭제 후 뒤로가기를 해 나타난 상품에 대한 삭제 버튼을 클릭해도 오류가 나타나지 않도록 수정함.
+ * 관리자 페이지의 상세 페이지
+ 	* 일반 상품 상세 페이지와 동일하게 수정해줌. 
+ 	* [관리자 페이지 상세 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_detail.png)
 
 ### 2023년 11월 8일
 * 주문 및 주문 확인
