@@ -1,5 +1,5 @@
 # 자바 웹 프로그래밍(2) 수1-3 20221017 임사랑
-
+[웹 기능 구현 폴더 이동](./https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
 ### 2023년 8월 30일 1주차 
 ---
 ###### 강의 소개
@@ -290,15 +290,97 @@
     	<location>/exception/main_server_downtime.jsp</location>
     	</error-page>
 
-### 2023년 10월 11일 
-* Request
-    * .getRemoteAddr() : 클라이언트의 IP 주소
-    * .getRequestURL() : 웹 브라우저가 요청한 url 경로
-    * .getParameter(String name) : 이름이 name인 파라미터를 반환
-    * .getParameterValues(String name) : 이름이 name인 모든 파라미터 값
-    * .getParameterNames() : 웹 브라우저가 전송한 파라미터의 이름을 반환
-* 자바에서 사용하는 외부 라이브러리 파일은 jar을 사용.
-    
+### 2023년 10월 11일 7주차
+---
+##### 1. 쇼핑몰 상품 등록 추가
+---
+###### 웹 트렌드 분석
+	- HTML 태그
+		- form 태그
+			- 전송 방식
+				- get : 주소에 쿼리스트링 형태로 값이 전달
+				- post : 내부 데이터 전송(안전)
+			- 사용자로부터 입력
+				- form 속 다양한 입력 데이터 전송 기능 제공.
+				- input, button, select, option 등
+	- form 데이터 전달받기
+		- JSP 내장 객체 중 request 객체 사용.
+		- 전송 받는 페이지는 반드시 .jsp 페이지여야 함.
+		- getParameter 메서드가 대표적임.
+		- 대표 메서드 종류
+			- getRemoteAddr() : 클라이언트의 IP 주소
+			- getRequestURI() : 웹 브라우저가 요청한 url 경로
+			- getParameter(String name) : 이름이 name인 파라미터
+			- getParameterValues(String name) : 이름이 name인 모든 파라미터 값
+			- getParameterNames() : 웹 브라우저가 전송한 파라미터의 이름 목록
+	- 파일 업로드 방식
+		- JSP 파일 업로드 및 다운로드 : form
+			- 서버 이미지 최적화
+				- 이미지 압축, 캐싱, 썸네일 최적화 등 다양한 기법 존재.
+				- png, jpeg, svg, gif 파일 비중 높음.
+			- form을 통한 파일 업로드
+				- 이미지, 실행 파일 등 바이너리 파일의 업로드
+				- multipart/form-data 속성 사용.
+			- MultipartRequest 객체 활용
+				- 파일 용량, 저장 경로, 인코딩, 이름 변환(중복) 등
+				- 서버 라이브러리 속 cos.jar 파일 필요.
+###### 상품 등록 페이지 추가
+	1. 관리자 모드 페이지 추가
+	- 관리자 모드 페이지 top_menu바에 상품 등록 navbar를 추가.
+	- 이미지 폴더 경로 수정.
+		- 절대 경로 -> 상대 경로로 수정.
+	- admin 폴더 속 product_add.jsp 파일을 생성.
+		- 쇼핑몰의 상품 등록을 진행하는 화면.
+		- 상품 코드, 상품명, 가격, 상세 정보, 제조사, 분류, 재고수, 상태 등을 입력 받음.
+	- admin 폴더 속 product_add_process.jsp 파일을 생성.
+		- admin 폴더 속 상품 정보를 저장에 대한 처리를 하는 페이지임.
+		- 한글 처리, request 객체 정보 전달, 현재 상품 객체에 추가. 
+	- ProductRepository.java 수정
+		- 데이터 추가를 위한 객체 변수 인스턴스 사용
+		- 메모리를 공유(stack에 1회), 같은 메모리 주소 사용.
+		- 인스턴스 변수 : 객체 내부에 존재하는 변수.
+		- 클래스 변수 : 공유를 위한 객체 외부 변수.
+	- body_main_ad.jsp 수정
+		- 기존 빈즈 제거 후, import 방식으로 변경.
+		- 현재 생성된 객체의 상품 목록 출력, 파일 및 폴더 변경으로 경로를 수정함.
+	- product_detail_ad.jsp를 수정.
+		- 기존 빈즈 제거 후 import 방식으로 변경.
+		- 파일 및 경로 수정.
+		- 세부 상품 정보 출력 관련.
+	2. 이미지 업로드
+	- product.java와 productRepository.java 파일에 file 변수 추가와 set/get 메서드를 추가함.
+	- 기존에 등록한 상품은 이미지 이름을 미리 지정해서 작성해줌.
+	- body_main.jsp 수정
+		- 메인 화면 이미지 로드 수정.
+		- <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
+	- 파일 업로드를 위한 라이브러리 cos.jar 추가.
+	- product_detail.jsp 및 product_detail_ad.jsp 파일 수정
+		- <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
+	- product_add.jsp 수정
+		- 파일 업로드를 위한 폼 전송 타입 수정
+		- <form name="newProduct" action="product_add_process.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
+		- 이미지 파일 폼 컨트롤 등록(등록 버튼 위)
+		- <div class ="form-group row">
+          <label class ="col-sm-2">이미지</label>
+              <div class ="col-sm-5">
+                <input type="file" name="productImage" class="form-control">
+              </div>
+          </div>
+	- product_add_process.jsp 수정
+		- 라이브러리 사용을 위한 import 추가
+		- 파일 업로드에 필요한 각 변수 초기화
+		- 서버 업로드 경로 로딩
+			- String filename = "";
+              String realFolder = request.getServletContext().getRealPath("image/product"); //웹 어플리케이션상의 절대 경로
+              String encType = "utf-8"; //인코딩 타입
+              int maxSize = 5 * 1024 * 1024; //최대 업로드될 파일의 크기5Mb
+              DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
+              MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, policy);
+		- getParameter 메서드 수정.
+		- Enumeration 객체 추가 : 파일명 반환.
+
+### 2023년 10월 18일 8주차 중간고사
+
 ### 2023년 10월 25일
 * 로그인 및 로그아웃 기능 추가
 
