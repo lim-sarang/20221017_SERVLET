@@ -1,5 +1,8 @@
 # 자바 웹 프로그래밍(2) 수1-3 20221017 임사랑
-[웹 기능 구현 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
+[웹 기능 구현 전체 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
+[웹 기능 구현 admin 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
+[웹 기능 구현 main 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
+---
 ### 2023년 8월 30일 1주차 
 ---
 ###### 강의 소개
@@ -10,6 +13,7 @@
 ### 2023년 9월 6일 2주차 
 ---
 ##### 1. 쇼핑몰 메인 페이지 개발
+* [index.jsp](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/mainScene.png)
 ##### 2. index.jsp 실행 및 수정 완료
 ##### 3. 프로젝트 환경 설정 및 HELLO WORLD 확인
 ---
