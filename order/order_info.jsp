@@ -27,9 +27,15 @@
                 <div class="form-group row">
                     <label class="col-sm-2">배송일</label>
                     <div class="col-sm-3">
-                        <input name="shippingDate" type="date" class="form-control" min="<%= java.time.LocalDate.now().plusDays(1) %>"/>(yyyy/mm/dd)
+                        <%
+                            java.time.LocalDate tomorrow = java.time.LocalDate.now().plusDays(2);
+                            String tomorrowStr = tomorrow.toString();
+                        %>
+                        <input name="shippingDate" type="date" class="form-control" min="<%= tomorrowStr %>"/>
                     </div>
                 </div>
+
+
                 <div class="form-group row">
                     <label class="col-sm-2">국가명</label>
                     <div class="col-sm-3">

@@ -474,7 +474,7 @@
  	* 관리자 페이지 메뉴 클릭 시, 로그인이 수행되도록 변경
  	* role 추가 대신, 상품 등록시 사용되는 로그인 role을 관리자모드 클릭시로 변경해줌.
 
-### 2023년 10월 25일 9주차
+### 2023년 11월 1일 10주차
 
 ---
 ##### 1. 쇼핑몰 장바구니 기능 추가
@@ -506,8 +506,53 @@
  	* 일반 상품 상세 페이지와 동일하게 수정해줌. 
  	* [관리자 페이지 상세 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_detail.png)
 
-### 2023년 11월 8일
-* 주문 및 주문 확인
-* 주문 취소
+### 2023년 11월 8일 11주차
+
+---
+##### 1. 쇼핑몰 주문 페이지
+
+##### 2. 11주차 연습 문제 구현완료
+
+---
+###### 웹 트렌드 분석
+	- 쿠키
+		- 세션과 동일한 역할
+		- 상태 유지
+		- 쿠키는 문자열로 저장됨.
+		- 정보 분리(웹 서버 부하 분산) 중요
+	- JSP 쿠키 내장 객체
+		- javax.servlet.http.cookie
+			- 로컬에 쿠키를 저장.
+			- 이름과 값으로 이루어짐.
+		- 한글 저장 : url 인코딩 필요.
+		- 자바 소스 코드 내에서 cookie 클래스 제공
+			- setPath 메서드로 동작하는 범위를 지정 가능.
+			- 삭제 메서드가 따로 존재 하지 않음.
+			- 유효시간 만료.
+			- set/get 메서드 등
+				- 주로 타임스탬프 정보에 활용됨.
+##### 주문 페이지 기능 구현
+* [주문 코드 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/order)
+* [주문 화면 이미지 폴더](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main/order)
+* [주문 정보 입력 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_info.png)
+* [주문 영수증 확인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_confirm.png)
+* [주문 취소 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_cancelled.png)
+* [주문 완료 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_end.png)
+* [세션 확인](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/cart/cart_session.png)
+##### 11주차 연습문제 구현 완료
+ * 배송일 날짜 선택 입력
+ 	* 날짜 제공 타입 지정.
+ 	* 입력 날짜가 반드시 내일 이후부터만 가능하도록 구현
+ *      <% java.time.LocalDate tomorrow = java.time.LocalDate.now().plusDays(2);
+                            String tomorrowStr = tomorrow.toString();
+                        %>
+                        <input name="shippingDate" type="date" class="form-control" min="<%= tomorrowStr %>"/>
+                    </div>
+                </div>
+	* [주문 날짜 지정 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_diribary.png)
+* 국가명을 select 박스로 수정
+	* [주문 국가 지정 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_contry.png)
+* 우편 번호와 주소를 검색을 통해 입력되도록 수정
+	* [주문 배송지 지정 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/order/order_address_popup.png)
 
     
