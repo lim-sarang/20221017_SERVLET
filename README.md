@@ -171,12 +171,78 @@
 	- footer에 example 속 파일을 import하는 코드를 추가.
 	- ShopTime time에 새로운 shoptime을 삽입.
 	- <%= time.timenow() %>를 통해 오늘 날짜와 시간을 확인.
+    
+### 2023년 09월 20일 4주차 개교기념일
 
-### 2023년 09월 27일 쇼핑몰 상품 목록 페이지 추가
-* 파일에 대한 링크 추가
-* 자바 빈즈 사용
-* 상품 목록 추가
-* 상품 사진 삽입
+### 2023년 9월 27일 5주차
+---
+##### 1. 쇼핑몰 상품 목록 페이지(이미지 포함) 추가
+##### 2. useBean 액션 태그 확인
+##### 3. 연습 문제 구현
+---
+###### 웹 트랜드 분석
+	1. 서블릿과 자바 빈즈
+		- 역할 구분
+          - JSP : 뷰
+          - 서블릿 : 제어
+          - 자바 빈즈 : 로직
+		- 자바 빈즈 장단점
+			- 장점
+				- 서블릿 객체 정보 저장/읽기
+				- 다수 JSP 페이지에 로직 재사용 가능.
+			- 단점
+				- 구조가 복잡해지는 경우, 성능 저하 문제 존재.
+		- 자바 빈즈 필수 개발 규약
+			- 패키지 : 폴더의 WEB-INF 하위 src 폴더 내
+			- Serializable 인터페이스 적용(생략 가능)
+				- 네트워크를 통해 객체가 전송되는 경우 저장방법 필요
+			- 생성자 : 객체를 만들 때, 값 초기화
+				- 멤버 변수들의 값을 지정하게 됨.
+			- 멤버 변수(private) : 변수에 직접 접근 제한(은닉화)
+				- private한 변수에 직접 접근이 불가능해 우회해 접근할 방법 필요.
+				- 선언하지 않는 경우, private로 동작함.
+			- get/set 메서드
+				- public 메서드로 구현해 접근.
+				- private 변수 수정/읽기.
+				- private한 멤버 변수에 접근 가능한 방법임.
+###### 쇼핑올 메인 페이지 개발
+	1. 상품 정보 구성 및 저장 (DB 사용 X)
+	2. 상품 정의, 상품 저장 java 개발
+		- DB 연동을 하지 않았으므로 자바 빈즈를 통해 객체 정보 저장.
+		- product.java
+			- src에 dto 패키지 속에 생성
+			- 상품 아이디, 상품명, 상품 가격, 제조사, 분류, 재고수, 신상품/중고품/재생품 구분에 대한 정의를 구현
+			- 각 멤버 변수에 대한 set, get 메소드를 구현.
+		- productRepository.java
+			- 상품 목록의 저장을 담당.
+			-  src 속 dao 패키지에 생성
+			-  product.java에서 정의한 멤버 변수를 작성해줌.
+			-  ArrayList를 사용해 상품 정보를 설정.
+		-  body_main 속 상품 목록 출력 부분 수정.
+		-  <jsp:useBean id="productDAO" class="dao.ProductRepositor" scope="session" /> : 자바 빈즈를 사용하기 위한 패키지 연동.
+		-  ArrayList<Product> listOfProducts = productDAO.getALLProducts(); : 리스트에 상품 전체 정보를 얻어옴.
+		-  for문을 통해 ArrayList에 저장된 상품 목록을 출력함.
+			- .size() 메서드를 통해 ArrayList의 크기를 리턴해줌. 
+		-  <%=product.getPname()%>, <%=product.getDescription()%>, <%=product.getUnitPrice()%>를 출력함.
+	3. 상품 목록을 6개가 출력되도록 수정함.
+###### 액션 태그 - useBean
+	- <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+		- 자바 빈즈 정의, 식별자와 클래스/범위 지정 완료.
+		- <% ProductRepository test=new ProductRepository();%>와 동일함.
+	- 객체 정보 저장 범위
+		- page : 현재 페이지 내에서만 정보를 유지. 기본값임.
+		- request : JSP 요청(객체)에 포함되는 모든 페이지에서 정보를 유지.
+		- session : 세션(객체)가 유지 되는 동안 정보를 유지.
+		- application : 종료 전까지. 즉, 웹 브라우저가 유지되는 동안 정보를 유지함.
+	- 상품 목록에 자바 빈즈를 활용해 이미지 추가
+		- image 폴더 속 product 폴더 생성
+		- 지정해둔 상품 코드와 동일하게 이미지의 이름을 지정
+		- body_main 코드 수정
+			- 상품 이름 상단에 이미지 삽입 태그 추가. (폴더 경로 확인)
+			- <img src="image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+###### 5주차 연습 문제 구현 완료.
+	- 상품 3개 추가.
+	- 이미지도 출력되도록 수정함.
 
 ### 2023년 10월 04일 쇼핑몰 상품 상세 페이지 추가
 * 파일에 대한 링크 추가
