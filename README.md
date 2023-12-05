@@ -2,10 +2,12 @@
 * [웹 기능 구현 전체 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot)
 * [웹 admin 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/admin)
 * [웹 main 이미지 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/screenshot/main)
+* [admin 코드 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/admin)
 ---
 ### 추가 구현
 * [popup 화면 sale 이미지로 변경](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/popup.png)
 * [회원가입 화면 주소검색 기능 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/singup/main_signup_add.png)
+* [회원가입 화면 모든 값 입력 에러 추가](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/singup/main_signup_error.png)
 * [상품 등록 시, 상품 id 길이 수정](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_name.png)
 ---
 ### 2023년 8월 30일 1주차 
@@ -266,9 +268,13 @@
 ### 2023년 10월 4일 6주차
 ---
 ##### 1. 쇼핑몰 상품 세부 정보 페이지 추가
+* [상품 세부 정보 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/product_Detail.png)
 ##### 2. 내장 객체
 ##### 3. 에러 페이지 지정하기
+* [상품 정보 에러 페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/product_error.png)
 ##### 4. 연습 문제 구현
+* [web.xml error 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/WEB-INF/web.xml)
+* [메인화면 에러페이지 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/main/main_error.png)
 ---
 ###### 웹 트랜드 분석
 	- JSP 내장 객체
@@ -403,8 +409,70 @@
 
 ### 2023년 10월 18일 8주차 중간고사
 
-### 2023년 10월 25일
-* 로그인 및 로그아웃 기능 추가
+### 2023년 10월 25일 9주차
+
+---
+##### 1. 쇼핑몰 관리자 로그인 기능 추가
+* [login 폴더 이동](https://github.com/lim-sarang/20221017_SERVLET/tree/main/login)
+* [관리자 로그인 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/login/admin_login.png)
+* [관리자 로그인 실패 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/login/admin_login_error.png)
+##### 2. 폼 입력값 필터링
+* [폼 입력값 필터링 js 코드](https://github.com/lim-sarang/20221017_SERVLET/blob/main/js/validation.js)
+* [폼 입력값 필터링 화면 id 필터링](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_name.png)
+* [폼 입력값 필터링 화면 상품 이름 필터링](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_productName.png)
+* [폼 입력값 필터링 화면 상품 가격 필터링](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_price.png)
+* [폼 입력값 필터링 화면 재고수 필터링](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/admin_product_add_validation_inventory.png)
+##### 3. 9주차 연습 문제 구현
+* [관리자 페이지 메뉴 로그인 수행 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/login/admin_login.png)
+* [관리자 페이지 로그인 실패 화면](https://github.com/lim-sarang/20221017_SERVLET/blob/main/screenshot/admin/login/admin_login_error.png)
+---
+###### 웹 트렌드 분석
+	- 웹 서버 보안
+		- 해킹
+		- 주요 목적 : 서비스 장애 및 정보 유출
+		- 랜섬웨어 DDos 피해 증가
+		- 랜섬웨어 등 악성 코드의 감염 원인
+	-  OWASP TOP 10
+		- A01 : 2021-잘못된 접근 제어
+		- A02 : 2021-암호화 실패
+		- A03 : 2021-인젝션
+		- A04 : 2021-불안전한 디자인
+		- A05 : 2021-보안 설정 오류
+		- A06 : 2021-취약하고 오래된 구성요소
+		- A07 : 2021-식별 및 인증 실패
+		- A08 : 2021-소프트에어 및 데이터 무결성 실패
+		- A09 : 2021-보안 기록 및 모니터링 실패
+		- A10 : 2021-서버사이드 요청 위조
+###### 상품 등록 페이지 추가
+	- 폼 입력값 필터링을 위한 validation.js 파일 작성.
+	- product_add.jsp 수정
+		- validation.js 파일 연동
+		- 자바 스크립트 체크를 위한 id 값, 전송 버튼을 js 호출형으로 수정.
+		- 상품코드, 상품명, 가격, 재고수 
+	- 탐캣 서버 내 tomcat-users.xml 파일 수정
+		- 리눅스 터미널 창 확인
+		- 파일 백업
+		- 주석 삭제로 활성화시킴
+		- 내용 수정
+		- admin이라는 role을 추가시킴.
+	- web.xml 수정
+		- 특정 페이지 접근을 위한 로그인 수행
+		- admin/product_add.jsp에 대한 보안 접근을 설정.
+		- 보안 접근 방법 : form을 통한 인증
+			- 대상 : login폴더에 login.jsp로 인증받도록 설정.
+	- login.jsp
+		- 상품 페이지 접근에 필요한 로그인 페이지를 구현.
+		- required
+			- 입력값 없이 submit 시, 포커싱
+			- autofocus는 문서 로드시 자동 포커싱
+			* 포커싱 : 사용자 인터페이스(UI)에서 현재 작업 중인 요소나 컨트롤에 대한 주목 또는 활성화를 의미
+	- login_failed.jsp 및 logout.jsp 파일 생성
+		- 로그인 실패 시, 다시 로그인 페이지 로딩.
+		- 로그아웃 버튼 클릭 시, 세션 삭제 후 상품 등록 페이지로 이동. 
+
+###### 9주차 연습문제 구현 완료
+ 	* 관리자 페이지 메뉴 클릭 시, 로그인이 수행되도록 변경
+ 	* role 추가 대신, 상품 등록시 사용되는 로그인 role을 관리자모드 클릭시로 변경해줌.
 
 ### 2023년 11월 1일
 * 세션 및 장바구니 기능 추가
